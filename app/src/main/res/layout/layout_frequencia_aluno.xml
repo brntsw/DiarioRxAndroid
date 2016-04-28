@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lay_aluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_aluno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/texto_tab"
+            android:textColor="@color/cinza_titulo_tela_interna"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="aluno" />
+
+        <br.gov.sp.educacao.sed.mobile.Util.SegmentedGroup
+            android:id="@+id/segmented"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/bt_nao_aplica"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sigla_nao_se_aplica"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/bt_falta"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sigla_falta"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/bt_compareceu"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sigla_compareceu"
+                style="@style/RadioButton" />
+
+        </br.gov.sp.educacao.sed.mobile.Util.SegmentedGroup>
+
+        <!--<Button
+            android:id="@+id/nao_aplicado"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:text="N/A"/>
+
+        <ImageView
+            android:id="@+id/selecao_switch"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:visibility="gone"/>-->
+
+        <TextView
+            android:id="@+id/tv_ativo"
+            android:textSize="24dp"
+            android:text="R"
+            android:gravity="center"
+            android:textColor="@color/amarelo_texto_dia_letivo"
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
